@@ -1,0 +1,16 @@
+C:\DeepControl\DeepControl\DeepControl\bin\Debug\net8.0-windows\DeepControl.exe
+C:\DeepControl\DeepControl\DeepControl\bin\Debug\net8.0-windows\DeepControl.deps.json
+C:\DeepControl\DeepControl\DeepControl\bin\Debug\net8.0-windows\DeepControl.runtimeconfig.json
+C:\DeepControl\DeepControl\DeepControl\bin\Debug\net8.0-windows\DeepControl.dll
+C:\DeepControl\DeepControl\DeepControl\bin\Debug\net8.0-windows\DeepControl.pdb
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.DeepControlForm.resources
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.csproj.GenerateResource.cache
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.GeneratedMSBuildEditorConfig.editorconfig
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.AssemblyInfoInputs.cache
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.AssemblyInfo.cs
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.csproj.CoreCompileInputs.cache
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.dll
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\refint\DeepControl.dll
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.pdb
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.genruntimeconfig.cache
+C:\DeepControl\DeepControl\DeepControl\obj\Debug\net8.0-windows\ref\DeepControl.dll
