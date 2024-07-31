@@ -1,0 +1,17 @@
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\win-x64\DeepControl.exe
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\win-x64\DeepControl.deps.json
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\win-x64\DeepControl.runtimeconfig.json
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\win-x64\DeepControl.dll
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\win-x64\DeepControl.pdb
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.csproj.GenerateResource.cache
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.GeneratedMSBuildEditorConfig.editorconfig
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.AssemblyInfoInputs.cache
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.AssemblyInfo.cs
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.csproj.CoreCompileInputs.cache
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.sourcelink.json
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.dll
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\refint\DeepControl.dll
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.pdb
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.genruntimeconfig.cache
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\ref\DeepControl.dll
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.RecycleBin.resources

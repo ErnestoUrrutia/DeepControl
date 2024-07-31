@@ -1,0 +1,5 @@
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\DeepControl.exe
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\DeepControl.dll
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\DeepControl.deps.json
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\DeepControl.runtimeconfig.json
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\DeepControl.pdb

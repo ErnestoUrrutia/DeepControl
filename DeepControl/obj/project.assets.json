@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\DeepControl\\DeepControl\\DeepControl\\DeepControl.csproj",
+      "projectUniqueName": "C:\\DeepControl\\DeepControl\\DeepControl.csproj",
       "projectName": "DeepControl",
-      "projectPath": "C:\\DeepControl\\DeepControl\\DeepControl\\DeepControl.csproj",
+      "projectPath": "C:\\DeepControl\\DeepControl\\DeepControl.csproj",
       "packagesPath": "C:\\Users\\Ernesto\\.nuget\\packages\\",
-      "outputPath": "C:\\DeepControl\\DeepControl\\DeepControl\\obj\\",
+      "outputPath": "C:\\DeepControl\\DeepControl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Ernesto\\AppData\\Roaming\\NuGet\\NuGet.Config",

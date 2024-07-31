@@ -1,0 +1,2 @@
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\win-x64\DeepControl.pdb
+C:\DeepControl\DeepControl\bin\Release\net8.0-windows\publish\win-x64\DeepControl.exe

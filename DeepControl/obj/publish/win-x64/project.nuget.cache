@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "QmiDCbIX9H8CpV43Lp//hzorbcty9kqCCUpcCYG5h8GxHkQx1UXeMv64WNP89aOoXWhbvax7KAQnKG9p6xPBKg==",
+  "success": true,
+  "projectFilePath": "C:\\DeepControl\\DeepControl\\DeepControl.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ernesto\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
