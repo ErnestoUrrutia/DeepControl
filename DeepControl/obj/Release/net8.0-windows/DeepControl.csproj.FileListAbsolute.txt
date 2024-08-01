@@ -3,7 +3,7 @@ C:\DeepControl\DeepControl\bin\Release\net8.0-windows\DeepControl.deps.json
 C:\DeepControl\DeepControl\bin\Release\net8.0-windows\DeepControl.runtimeconfig.json
 C:\DeepControl\DeepControl\bin\Release\net8.0-windows\DeepControl.dll
 C:\DeepControl\DeepControl\bin\Release\net8.0-windows\DeepControl.pdb
-C:\DeepControl\DeepControl\obj\Release\net8.0-windows\DeepControl.RecycleBin.resources
+C:\DeepControl\DeepControl\obj\Release\net8.0-windows\DeepControl.DeepControlForm.resources
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\DeepControl.csproj.GenerateResource.cache
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\DeepControl.GeneratedMSBuildEditorConfig.editorconfig
 C:\DeepControl\DeepControl\obj\Release\net8.0-windows\DeepControl.AssemblyInfoInputs.cache
