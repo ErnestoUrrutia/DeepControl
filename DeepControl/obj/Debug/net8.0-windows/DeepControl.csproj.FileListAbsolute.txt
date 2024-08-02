@@ -47,4 +47,13 @@ C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\refint\DeepControl.dll
 C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.pdb
 C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.genruntimeconfig.cache
 C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\ref\DeepControl.dll
-C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.DeepControlForm.resources
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.Asio.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.Core.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.Midi.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.Wasapi.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.WinForms.dll
+C:\DeepControl\DeepControl\bin\Debug\net8.0-windows\NAudio.WinMM.dll
+C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.csproj.AssemblyReference.cache
+C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepCont.42613981.Up2Date
+C:\DeepControl\DeepControl\obj\Debug\net8.0-windows\DeepControl.MouseMover.resources

